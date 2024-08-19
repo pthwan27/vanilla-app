@@ -1,0 +1,12 @@
+#clock_div {
+  font-family: SBAggroB;
+  font-size: 40px;
+}
+
+.digit {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.digit.change {
+  transform: translateY(-5px);
+  opacity: 0;
+}

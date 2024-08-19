@@ -1,0 +1,14 @@
+#quotes_div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#quotes_title {
+  font-size: 20px;
+  font-family: SBAggroL;
+}
+
+#quotes_author {
+  margin-top: 4px;
+}
