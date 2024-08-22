@@ -8,4 +8,3 @@ bg_img.src = `img/${images[selected_img]}`;
 bg_img.id = "bg_img";
 
 document.body.appendChild(bg_img);
-console.log(bg_img);

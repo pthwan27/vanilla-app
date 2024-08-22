@@ -2,6 +2,7 @@
 @import "/src/css/clock.css";
 @import "/src/css/quotes.css";
 @import "/src/css/background.css";
+@import "/src/css/todo.css";
 
 @font-face {
   font-family: "SBAggroB";
