@@ -3,6 +3,7 @@
 @import "/src/css/quotes.css";
 @import "/src/css/background.css";
 @import "/src/css/todo.css";
+@import "/src/css/weather.css";
 
 @font-face {
   font-family: "SBAggroB";

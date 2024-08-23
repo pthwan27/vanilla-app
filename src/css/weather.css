@@ -1,0 +1,12 @@
+#weather_div {
+  display: flex;
+  flex-direction: column;
+}
+#weather_div > span {
+  text-align: center;
+}
+
+#weather_icon_img {
+  width: 20%;
+  height: 20%;
+}
