@@ -8,39 +8,57 @@
 </head>
 
 <body>
-  <div id="clock_div">
-    <div class="hour-section">
-      <span class="digit" id="hours-tens">0</span>
-      <span class="digit" id="hours-ones">0</span> :
+  <nav>
+    <div id="clock_div">
+      <div class="hour-section">
+        <span class="digit" id="hours-tens"></span>
+        <span class="digit" id="hours-ones"></span>
+      </div>
+      <div class="colon-section">
+        <span class="digit">:</span>
+      </div>
+      <div class="minute-section">
+        <span class="digit" id="minutes-tens"></span>
+        <span class="digit" id="minutes-ones"></span>
+      </div>
     </div>
-    <div class="minute-section">
-      <span class="digit" id="minutes-tens">0</span>
-      <span class="digit" id="minutes-ones">0</span>
+  </nav>
+
+  <main>
+    <div id="left_div">
+
+      <form id="login_form" class="hidden">
+        <input id="login_form__id" required maxlength="15" type="text" placeholder="id" />
+
+        <input type="submit" />
+      </form>
+      <h1 id="login_user_id" class="hidden"></h1>
+
+      <div id="weather_div">
+        <span></span>
+        <span></span>
+      </div>
     </div>
-  </div>
+    <div id="right_div">
 
-  <form id="login_form" class="hidden">
-    <input id="login_form__id" required maxlength="15" type="text" placeholder="id" />
+      <form id="todo_form">
+        <input type="text" placeholder="Write to do and Press Enter" required>
 
-    <input type="submit" />
-  </form>
-  <h1 id="login_user_id" class="hidden"></h1>
+      </form>
+      <ul id="todo_list"></ul>
+    </div>
 
-  <div id="quotes_div">
-    <span id="quotes_title"></span>
-    <span id="quotes_author"></span>
-  </div>
+  </main>
 
-  <form id="todo_form">
-    <input type="text" placeholder="Write to do and Press Enter" required>
+  <footer>
+    <div id="quotes_div">
+      <span id="quotes_title"></span>
 
-  </form>
+      <span id="quotes_author"></span>
+    </div>
 
-  <div id="weather_div">
-    <span></span>
-  </div>
+  </footer>
 
-  <ul id="todo_list"></ul>
 
   <script type="module" src="./js/index.js"></script>
 </body>

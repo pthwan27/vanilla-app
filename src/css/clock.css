@@ -1,11 +1,31 @@
 #clock_div {
+  width: fit-content;
+  display: flex;
   font-family: SBAggroB;
-  font-size: 40px;
+  font-size: 48px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 .digit {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+  display: inline-block;
+  position: relative;
+
+  transform: rotate(var(--rotate, 0deg));
+  margin-left: var(--shift-x, 0px);
+  margin-top: var(--shift-y, 0px);
+  color: var(--color, #000);
 }
+
+.hour-section,
+.minute-section {
+  display: flex;
+  align-items: center;
+}
+
 .digit.change {
   transform: translateY(-5px);
   opacity: 0;

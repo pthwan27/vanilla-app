@@ -10,7 +10,7 @@ function setWeather(info) {
 
   weatherIconImg.src = iconURL;
   weatherIconImg.id = "weather_icon_img";
-  weatherDiv.appendChild(weatherIconImg);
+  weatherDiv.lastElementChild.appendChild(weatherIconImg);
 }
 
 function onGeoSuccess({ coords }) {

@@ -28,3 +28,38 @@ function updateDigit(e, newValue) {
   setClock();
   setInterval(setClock, 1000);
 })();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const digits = document.querySelectorAll(".digit");
+
+  digitsChange(digits);
+});
+
+function getRandomColor(baseColor) {
+  const minBrightness = 50;
+  const variation = 30;
+  let r = baseColor[0] + Math.random() * variation - variation / 2;
+  let g = baseColor[1] + Math.random() * variation - variation / 2;
+  let b = baseColor[2] + Math.random() * variation - variation / 2;
+  r = Math.max(r, minBrightness);
+  g = Math.max(g, minBrightness);
+  b = Math.max(b, minBrightness);
+
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
+function digitsChange(digits) {
+  const baseColor = [50, 100, 150];
+
+  digits.forEach((digit) => {
+    const randomRotate = (Math.random() * 15 - 10).toFixed(1);
+    const shiftX = Math.random() * 2 - 5;
+    const shiftY = Math.random() * 2 - 1;
+    const color = getRandomColor(baseColor);
+
+    digit.style.setProperty("--rotate", `${randomRotate}deg`);
+    digit.style.setProperty("--shift-x", `${shiftX}px`);
+    digit.style.setProperty("--shift-y", `${shiftY}px`);
+    digit.style.setProperty("--color", color);
+  });
+}
