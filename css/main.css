@@ -1,0 +1,21 @@
+#login_todo_div {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+
+#left_div,
+#right_div {
+  margin: 0 2px;
+  min-height: 95%;
+  max-height: 98%;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+#left_div {
+  min-width: 30%;
+}
+#right_div {
+  min-width: 70%;
+}

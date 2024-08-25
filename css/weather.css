@@ -1,0 +1,33 @@
+#weather_div {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#weather_div > p {
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+  padding-top: 8px;
+}
+
+#weather_section {
+  height: 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-left: -10px;
+}
+
+#weather_section > img {
+  width: 80px;
+  height: 80px;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+#weather_section > span {
+  margin-left: -10px;
+}

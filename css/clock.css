@@ -1,0 +1,49 @@
+#clock_div {
+  min-width: 100%;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  font-family: SBAggroB;
+  padding: 4px;
+  /* border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+.digit {
+  width: 20px;
+  display: inline-block;
+  position: relative;
+
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: rotate(var(--rotate, 0deg));
+  margin-left: var(--shift-x, 0px);
+  color: var(--color, #000);
+}
+
+.hour-section,
+.minute-section,
+.second-section {
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+
+  z-index: 1;
+  text-align: center;
+}
+.colon-section {
+  width: 4px;
+  display: flex;
+  font-size: 24px;
+
+  align-items: center;
+
+  text-align: center;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.digit.change {
+  transform: translateY(-3px);
+  opacity: 0;
+}

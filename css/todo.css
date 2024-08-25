@@ -1,0 +1,99 @@
+#todo_div {
+  height: 100%;
+  padding: 8px;
+}
+#todo_form {
+  margin: 8px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+#todo_form input {
+  width: 90%;
+  font-size: 16px;
+  background: 0;
+  border: 0;
+  outline: none;
+  border-bottom: 3px solid rgb(0, 0, 0);
+  transition: border-color 0.3s ease;
+
+  color: rgb(0, 0, 0);
+
+  text-align: center;
+}
+
+#todo_form input:focus {
+  border-bottom: 3px solid rgba(89, 163, 195, 0.8);
+  outline: none;
+}
+
+/* 리스트 스타일 설정 */
+#todo_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* 스크롤바 스타일 커스터마이징 (선택사항) */
+#todo_list::-webkit-scrollbar {
+  width: 8px;
+}
+
+#todo_list::-webkit-scrollbar-thumb {
+  background-color: rgba(89, 163, 195, 0.427);
+  border-radius: 8px;
+}
+
+#todo_list::-webkit-scrollbar-track {
+  background-color: #f8f0f0;
+}
+
+.todo_list_li {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 8px;
+
+  background-color: rgba(255, 255, 255, 0.579);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  height: 80px;
+  overflow: hidden;
+}
+.todo_list_li > span {
+  padding: 4px;
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+
+  word-wrap: break-word;
+  display: -webkit-box;
+
+  -webkit-line-clamp: 3; /* 최대 3줄까지만 표시 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 넘칠 때 말줄임(...) 표시 */
+}
+
+.todo_list_li > button {
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 10px;
+  width: fit-content;
+  padding: 4px;
+  background: transparent;
+
+  transition: background 0.3s ease;
+}
+.todo_list_li > button:hover {
+  background: rgba(201, 73, 73, 0.824);
+}
