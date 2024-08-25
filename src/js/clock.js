@@ -58,12 +58,10 @@ function digitsChange(digits) {
   digits.forEach((digit) => {
     const randomRotate = (Math.random() * 15 - 10).toFixed(1);
     const shiftX = Math.random() * 2 - 5;
-    const shiftY = Math.random() * 2 - 1;
     const color = getRandomColor(baseColor);
 
     digit.style.setProperty("--rotate", `${randomRotate}deg`);
     digit.style.setProperty("--shift-x", `${shiftX}px`);
-    digit.style.setProperty("--shift-y", `${shiftY}px`);
     digit.style.setProperty("--color", color);
   });
 }
