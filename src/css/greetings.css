@@ -1,0 +1,88 @@
+#login_form,
+#logout_form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+#login_form > span {
+  margin-top: -24px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#login_form_id {
+  width: 90%;
+  font-size: 16px;
+  background: 0;
+  border: 0;
+  outline: none;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  transition: border-color 0.3s ease;
+
+  caret-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+
+#logout_form > span {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: center;
+}
+#login_user_id {
+  max-width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgba(201, 73, 73, 0.824);
+  font-size: 32px !important;
+}
+
+#login_form_id:focus {
+  border-bottom: 2px solid rgba(201, 73, 73, 0.824);
+}
+
+#login_form_button,
+#logout_form_button {
+  cursor: pointer;
+  margin-top: 8px;
+  padding: 4px 8px;
+  background: transparent;
+  border-radius: 18px;
+  font-size: 16px;
+  width: fit-content;
+
+  transition: background 0.3s ease;
+}
+
+#login_form_button:hover,
+#logout_form_button:hover {
+  background: rgba(201, 73, 73, 0.824);
+}
+
+#tooltiptext {
+  font-family: SBAggroL;
+  font-size: 16px !important;
+  position: absolute;
+  color: #585858;
+  border-radius: 24px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 200px; /* 팝업의 최대 너비 */
+  word-wrap: break-word; /* 긴 단어가 줄 바꿈되도록 설정 */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#tooltiptext.show {
+  visibility: visible;
+  opacity: 1;
+}

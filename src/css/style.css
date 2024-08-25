@@ -1,3 +1,4 @@
+@import "/src/css/nav.css";
 @import "/src/css/main.css";
 @import "/src/css/greetings.css";
 @import "/src/css/clock.css";
@@ -29,36 +30,57 @@
   font-weight: normal;
   font-style: normal;
 }
-
 body {
+  margin: 0;
+  padding: 0;
   font-family: SBAggroM;
-  padding: 8px;
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-nav,
+
+nav {
+  padding-top: 8px;
+  margin: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  flex: 1;
+}
+
 footer {
   display: flex;
-  justify-content: center; /* 가로 중앙 정렬 */
-  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: center;
+  align-items: center;
   text-align: center;
   flex: 1;
   flex-shrink: 0;
 }
 
 main {
-  flex: 5;
+  flex: 12;
   display: flex;
-  justify-content: space-evenly;
-  padding: 20px;
+  justify-content: center;
+
+  z-index: 10;
 }
 
 input {
   font-family: SBAggroL;
 }
 
+button {
+  font-family: SBAggroM;
+}
+span {
+  font-family: SBAggroM;
+}
+
+p {
+  font-family: SBAggroB;
+}
+
 .hidden {
-  display: none;
+  display: none !important;
 }

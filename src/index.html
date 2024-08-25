@@ -9,45 +9,65 @@
 
 <body>
   <nav>
-    <div id="clock_div">
-      <div class="hour-section">
-        <span class="digit" id="hours-tens"></span>
-        <span class="digit" id="hours-ones"></span>
+    <div id="clock_weather_div">
+      <div id="clock_div">
+        <div class="hour-section">
+          <span class="digit" id="hours-tens"></span>
+          <span class="digit" id="hours-ones"></span>
+        </div>
+        <div class="colon-section">
+          <span class="digit">:</span>
+        </div>
+        <div class="minute-section">
+          <span class="digit" id="minutes-tens"></span>
+          <span class="digit" id="minutes-ones"></span>
+        </div>
+        <div class="colon-section">
+          <span class="digit">:</span>
+        </div>
+        <div class="second-section">
+          <span class="digit" id="seconds-tens"></span>
+          <span class="digit" id="seconds-ones"></span>
+        </div>
       </div>
-      <div class="colon-section">
-        <span class="digit">:</span>
-      </div>
-      <div class="minute-section">
-        <span class="digit" id="minutes-tens"></span>
-        <span class="digit" id="minutes-ones"></span>
+
+      <div id="weather_div">
+        <p>Today's Weather</p>
+        <div id="weather_section">
+          <span id="weather_temp"> </span>
+        </div>
       </div>
     </div>
   </nav>
 
   <main>
-    <div id="left_div">
+    <div id="login_todo_div">
+      <div id="left_div">
+        <form id="login_form" class="hidden">
+          <span>What is your name? </span>
+          <input id="login_form_id" required maxlength="15" type="text" />
 
-      <form id="login_form" class="hidden">
-        <input id="login_form__id" required maxlength="15" type="text" placeholder="id" />
+          <button id="login_form_button" type="submit">login</button>
+        </form>
+        <form id="logout_form" class="hidden">
+          <span>Hello</span>
+          <span id="login_user_id" class="tooltip"></span>
+          <span id="tooltiptext"></span>
 
-        <input type="submit" />
-      </form>
-      <h1 id="login_user_id" class="hidden"></h1>
+          <button id="logout_form_button" type="submit">logout</button>
 
-      <div id="weather_div">
-        <span></span>
-        <span></span>
+        </form>
+
       </div>
+      <div id="right_div">
+        <form id="todo_form">
+          <input type="text" placeholder="Write to do and Press Enter" required>
+
+        </form>
+        <ul id="todo_list"></ul>
+      </div>
+
     </div>
-    <div id="right_div">
-
-      <form id="todo_form">
-        <input type="text" placeholder="Write to do and Press Enter" required>
-
-      </form>
-      <ul id="todo_list"></ul>
-    </div>
-
   </main>
 
   <footer>

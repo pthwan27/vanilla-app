@@ -1,4 +1,4 @@
-const images = ["bg_1.jpg", "bg_2.jpg", "bg_3.jpg", "bg_4.jpg", "bg_5.jpg", "bg_6.jpg"];
+const images = ["bg_1.jpg", "bg_2.jpg", "bg_4.jpg", "bg_5.jpg", "bg_6.jpg"];
 
 const bg_img = document.createElement("img");
 

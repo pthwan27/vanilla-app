@@ -1,27 +1,27 @@
 import { API_KEY } from "../config.js";
 
-const weatherDiv = document.querySelector("#weather_div");
+const weatherSection = document.querySelector("#weather_section");
+
+const tempSpan = document.querySelector("#weather_temp");
 const weatherIconImg = document.createElement("img");
 
 function setWeather(info) {
   const iconURL = `https://openweathermap.org/img/wn/${info.icon}@2x.png`;
 
-  weatherDiv.firstElementChild.innerText = info.name;
-
   weatherIconImg.src = iconURL;
-  weatherIconImg.id = "weather_icon_img";
-  weatherDiv.lastElementChild.appendChild(weatherIconImg);
+  weatherIconImg.id = "weather_icon";
+
+  weatherSection.appendChild(weatherIconImg);
+
+  tempSpan.innerText = info.temp[0] + "°C";
 }
 
 function onGeoSuccess({ coords }) {
-  // const lat = coords.latitude;
-  // const lon = coords.latitude;
+  const lat = coords.latitude;
+  const lon = coords.latitude;
+  const units = "metric";
 
-  //wonju
-  const lat = 37.33908333;
-  const lon = 127.9220556;
-
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${API_KEY}`;
 
   fetch(url)
     .then((res) => res.json())
@@ -29,7 +29,9 @@ function onGeoSuccess({ coords }) {
       const weatherInfo = {
         name: data.name,
         weather: data.weather,
+
         icon: data.weather[0].icon,
+        temp: data.main.temp.toString().split("."),
       };
 
       setWeather(weatherInfo);
