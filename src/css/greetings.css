@@ -75,8 +75,8 @@
   padding: 8px;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 200px; /* 팝업의 최대 너비 */
-  word-wrap: break-word; /* 긴 단어가 줄 바꿈되도록 설정 */
+  max-width: 200px;
+  word-wrap: break-word;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s;
