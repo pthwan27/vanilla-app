@@ -1,11 +1,11 @@
-@import "/src/css/nav.css";
-@import "/src/css/main.css";
-@import "/src/css/greetings.css";
-@import "/src/css/clock.css";
-@import "/src/css/quotes.css";
-@import "/src/css/background.css";
-@import "/src/css/todo.css";
-@import "/src/css/weather.css";
+@import "./nav.css";
+@import "./main.css";
+@import "./greetings.css";
+@import "./clock.css";
+@import "./quotes.css";
+@import "./background.css";
+@import "./todo.css";
+@import "./weather.css";
 
 @font-face {
   font-family: "SBAggroB";
