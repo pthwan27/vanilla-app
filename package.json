@@ -5,5 +5,8 @@
   "repository": "https://github.com/pthwan27/vanilla-app.git",
   "author": "pthwan27",
   "license": "MIT",
-  "scripts": {}
+  "scripts": {},
+  "dependencies": {
+    "gh-pages": "^6.1.1"
+  }
 }
