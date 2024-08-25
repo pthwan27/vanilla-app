@@ -1,4 +1,4 @@
-import { API_KEY } from "../config.js";
+import API_KEY from "./config";
 
 const weatherSection = document.querySelector("#weather_section");
 
@@ -21,7 +21,7 @@ function onGeoSuccess({ coords }) {
   const lon = coords.latitude;
   const units = "metric";
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${API_KEY}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${API_KEY.key}`;
 
   fetch(url)
     .then((res) => res.json())
