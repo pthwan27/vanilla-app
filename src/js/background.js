@@ -1,10 +1,10 @@
-const images = ["bg_1.jpg", "bg_2.jpg", "bg_4.jpg", "bg_5.jpg", "bg_6.jpg"];
+const imagesNum = 4;
 
 const bg_img = document.createElement("img");
 
-const selected_img = Math.floor(Math.random() * images.length);
+const selectedNum = Math.floor(Math.random() * imagesNum);
 
-bg_img.src = `img/${images[selected_img]}`;
+bg_img.src = `img/bg_${selectedNum + 1}.jpg`;
 bg_img.id = "bg_img";
 
 document.body.appendChild(bg_img);

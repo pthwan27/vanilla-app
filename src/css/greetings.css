@@ -23,10 +23,9 @@
   background: 0;
   border: 0;
   outline: none;
-  border-bottom: 2px solid rgb(0, 0, 0);
+  border-bottom: 3px solid rgb(0, 0, 0);
   transition: border-color 0.3s ease;
 
-  caret-color: rgb(0, 0, 0);
   color: rgb(0, 0, 0);
 }
 
@@ -36,16 +35,17 @@
   font-size: 24px;
   text-align: center;
 }
+
+#login_form_id:focus {
+  border-bottom: 3px solid rgba(201, 73, 73, 0.824);
+}
+
 #login_user_id {
   max-width: 90%;
   overflow: hidden;
   white-space: nowrap;
   color: rgba(201, 73, 73, 0.824);
   font-size: 32px !important;
-}
-
-#login_form_id:focus {
-  border-bottom: 2px solid rgba(201, 73, 73, 0.824);
 }
 
 #login_form_button,
