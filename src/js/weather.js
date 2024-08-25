@@ -1,5 +1,3 @@
-import API_KEY from "./config";
-
 const weatherSection = document.querySelector("#weather_section");
 
 const tempSpan = document.querySelector("#weather_temp");
